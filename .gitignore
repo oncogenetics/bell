@@ -37,3 +37,9 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+# test, backup scripts, and link files
+output/*.*
+testing_*.*
+backup_*.*
+*_link.txt
