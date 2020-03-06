@@ -5,6 +5,7 @@
 library(shiny)
 library(ggplot2)
 library(emojifont)
+library(colourpicker)
 
 # Data --------------------------------------------------------------------
 x <- curve(dnorm, from = -5, to = 5)
