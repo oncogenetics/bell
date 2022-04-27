@@ -19,9 +19,8 @@ function(input, output) {
   ggplot(plotDat, aes(x, y)) +
     geom_hline(yintercept = 0, col = "#ADAFAF") +
     geom_line(size = input$bellLineSize) +
-    geom_ribbon(data = subset(plotDat, 
-                              x > qnorm(input$q1q2[ 1 ]) &
-                                x < qnorm(input$q1q2[ 2 ])),
+    geom_ribbon(data = plotDat[ plotDat$x > qnorm(input$q1q2[ 1 ]) &
+                                  plotDat$x < qnorm(input$q1q2[ 2 ]), ],
                 aes(ymax = y, fill = input$shadeCol), ymin = 0,
                 colour = NA, alpha = 0.5, show.legend = FALSE) +
     geom_text(aes(x, y, col = col, label = label),
